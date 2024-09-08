@@ -13,7 +13,7 @@ LOWER_HEIGHT = 3 # cm
 UPPER_HEIGHT = 7 # cm
 
 got = ugot.UGOT()
-got.initialize('192.168.196.130')
+got.initialize('192.168.196.130') #IP
 got.open_camera()
 got.load_models(["line_recognition", "apriltag_qrcode"])
 got.set_track_recognition_line(0)  # 0: mono line, 1: double line
@@ -129,10 +129,10 @@ while True:
         data = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
         text = f"{offset} {x_center} {y_center}"
-        position = (50, 50)  # Adjust position if needed
+        position = (50, 50)  
         font = cv2.FONT_HERSHEY_SIMPLEX
         font_scale = 1
-        color = (255, 255, 255)  # White color in BGR
+        color = (255, 255, 255) 
         thickness = 2
 
         # Put the text on the image
